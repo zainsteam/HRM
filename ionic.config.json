@@ -1,0 +1,7 @@
+{
+  "name": "HRM",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
