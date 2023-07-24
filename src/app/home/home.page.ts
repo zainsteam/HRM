@@ -9,4 +9,10 @@ export class HomePage {
 
   constructor() {}
 
+  UD(){
+    alert("Under Development");
+  }
+
 }
+
+

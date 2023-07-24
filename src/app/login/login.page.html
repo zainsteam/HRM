@@ -1,0 +1,27 @@
+<ion-header [translucent]="true" class="header">
+  <ion-toolbar color="primary">
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-img
+  src="assets\img\icon.jpg"
+  alt="Union Security"
+></ion-img>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="Email" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" required></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="primary" expand="block" (click)="login()">Sign In</ion-button>
+      </ion-col>
+    </ion-row>
+</ion-content>
