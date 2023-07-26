@@ -10,4 +10,17 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true"></ion-content>
+<ion-content [fullscreen]="true">
+  <ion-item><h3>To check-in, Perform these steps</h3></ion-item>
+  <ion-item>
+  <p>
+    1- Scan barcode with in 30 meter Distance<br/>
+    2- Take a selfie <br/>
+    3- Submit
+  </p>
+</ion-item>
+  <ion-button expand="block" (click)="Scan()">Check-In</ion-button>
+  <ion-button expand="block" disabled>Check-Out</ion-button>
+
+
+</ion-content>

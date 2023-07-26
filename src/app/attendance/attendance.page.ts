@@ -12,4 +12,8 @@ export class AttendancePage implements OnInit {
   ngOnInit() {
   }
 
+  scan(){
+    console.log("scanning start");
+  }
+
 }
