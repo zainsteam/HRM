@@ -1,0 +1,24 @@
+  ion-card{
+    background-color: var(--ion-color-primary);
+    margin :0;
+    text-align: center;
+    color: black !important;
+    padding: 20px 0;
+  }
+  ion-icon{
+    font-size:46px ;
+  }
+  
+  ion-card-content{
+    color: var(--ion-color-light);
+    font-size: 18px;
+  }
+
+  .title{
+  color: #293991;
+  font-weight: 900 !important;
+  }
+
+  .NoDisplay{
+    display: none;
+  }
