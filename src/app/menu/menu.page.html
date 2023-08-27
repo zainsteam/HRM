@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Main Menu</ion-title>
+    <ion-buttons slot="end" >
+      <ion-button (click)="logout()"><ion-icon name="power" size="small"></ion-icon></ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col SIZE="6">
+        <ion-card [routerLink]="['/home']" class="ion-activatable ripple-parent rectangle">
+          <ion-card-header>
+            <ion-card-subtitle><ion-icon name="people" color="light"></ion-icon></ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>H R M
+          </ion-card-content>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

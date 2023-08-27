@@ -1,0 +1,8 @@
+{
+  "name": "Union Security",
+  
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

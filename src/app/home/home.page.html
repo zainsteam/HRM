@@ -1,0 +1,115 @@
+<ion-header [translucent]="true" class="header" >
+  <ion-toolbar color="primary">
+    <ion-title >
+      HRM People
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button><i class="ion-arrow-left-c"></i> Back</ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end" >
+      <ion-button (click)="logout()"><ion-icon name="power" size="small"></ion-icon></ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col SIZE="6" >
+        <ion-card [routerLink]="['/attendance']" class="ion-activatable ripple-parent rectangle" >
+          <ion-card-header >
+            <ion-card-subtitle><ion-icon name="calendar-number" color="light"></ion-icon></ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>Attendance
+          </ion-card-content>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+      </ion-col>
+      <ion-col SIZE="6">
+        <ion-card (click)="UD()" class="ion-activatable ripple-parent rectangle">
+          <ion-card-header >
+            <ion-card-subtitle><ion-icon name="mail" color="light"></ion-icon></ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>e-Leave
+          </ion-card-content>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+      </ion-col>
+      <ion-col SIZE="6">
+        <ion-card (click)="UD()" class="ion-activatable ripple-parent rectangle">
+          <ion-card-header >
+            <ion-card-subtitle><ion-icon name="person" color="light"></ion-icon></ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>My Profile
+          </ion-card-content>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+      </ion-col>
+      <ion-col SIZE="6">
+        <ion-card (click)="UD()" class="ion-activatable ripple-parent rectangle">
+          <ion-card-header >
+            <ion-card-subtitle><ion-icon name="receipt" color="light"></ion-icon></ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>Payslip
+          </ion-card-content>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+      </ion-col>
+      <ion-col SIZE="6">
+        <ion-card (click)="UD()" class="ion-activatable ripple-parent rectangle">
+          <ion-card-header >
+            <ion-card-subtitle><ion-icon name="alert-circle" color="light"></ion-icon></ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>Claims
+          </ion-card-content>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+      </ion-col>
+      <ion-col SIZE="6">
+        <ion-card (click)="UD()" class="ion-activatable ripple-parent rectangle">
+          <ion-card-header >
+            <ion-card-subtitle><ion-icon name="folder-open" color="light"></ion-icon></ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>Documents
+          </ion-card-content>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+      </ion-col>
+      <ion-col SIZE="6">
+        <ion-card (click)="UD()" class="ion-activatable ripple-parent rectangle">
+          <ion-card-header >
+            <ion-card-subtitle><ion-icon name="notifications" color="light"></ion-icon></ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>Notification
+          </ion-card-content>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+      </ion-col>
+      <ion-col SIZE="6">
+        <ion-card (click)="UD()" class="ion-activatable ripple-parent rectangle">
+          <ion-card-header >
+            <ion-card-subtitle><ion-icon name="cog" color="light"></ion-icon></ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>Setting
+          </ion-card-content>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+      </ion-col>
+      <ion-col SIZE="6">
+        <ion-card (click)="UD()" class="ion-activatable ripple-parent rectangle">
+          <ion-card-header >
+            <ion-card-subtitle><ion-icon name="help-circle" color="light"></ion-icon></ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>Support
+          </ion-card-content>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+      </ion-col>
+      
+      
+     
+
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

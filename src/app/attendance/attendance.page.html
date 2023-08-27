@@ -1,0 +1,80 @@
+<ion-header [translucent]="true" class="header">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Attendance
+    </ion-title>
+    <ion-buttons slot="start" >
+      <ion-back-button><i class="ion-arrow-left-c"></i> Back</ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end" >
+    <ion-button (click)="logout()"><ion-icon name="power" size="small"></ion-icon></ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item class="title">
+    <h4>Perform These Steps To Check-in</h4>
+  </ion-item>
+  <ion-item>
+    <p>
+      1- Scan your check-in barcode <br />
+      2- Take a selfie <br />
+      3- Submit
+    </p>
+  </ion-item>
+  <ion-grid> 
+    <ion-row>
+      <ion-col [ngClass]="{'NoDisplay': checkin == 'false' || checkin == false}"  >
+        <ion-card (click)="Scan()" class="ion-activatable ripple-parent rectangle check-in">
+          <ion-card-header>
+            <ion-card-subtitle><ion-icon name="qr-code" color="light"></ion-icon></ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content >Check-In 
+          </ion-card-content>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+      </ion-col>
+      <ion-col [ngClass]="{'NoDisplay': checkin == 'true' || checkin == true}" >
+        <ion-card (click)="UD()" class="ion-activatable ripple-parent rectangle check-out">
+          <ion-card-header>
+            <ion-card-subtitle><ion-icon name="log-out" color="light"></ion-icon></ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>Check-Out
+          </ion-card-content>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-item class="title">
+    <h4>Check Your History</h4>
+  </ion-item>
+  <ion-item class="ion-margin-horizontal">
+    <ion-datetime #datetime presentation="date" (ionChange)="dateTimeUpdated($event)" [(ngModel)]="SelDate"
+      [isDateEnabled]="isWeekday" [highlightedDates]="week.data">
+
+      <ion-buttons slot="buttons">
+        <!-- <ion-button color="danger" (click)="datetime.reset()">Reset</ion-button>
+        <ion-button color="primary" (click)="datetime.cancel()">Never mind</ion-button> -->
+        <ion-button color="primary" (click)="datetime.confirm()">Details</ion-button>
+      </ion-buttons>
+    </ion-datetime>
+  </ion-item>
+  <ion-item class="title" *ngIf="details">
+    <h4>Full Details</h4>
+  </ion-item>
+    <ion-list *ngIf="details">
+      <ion-item>
+        <ion-label><b>Address : </b>{{details.address }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label><b>Clock Time : </b>{{details.start_time }} - {{details.end_time}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label><b>Break Time : </b>{{details.break_time }}</ion-label>
+      </ion-item>
+    </ion-list>
+
+</ion-content>

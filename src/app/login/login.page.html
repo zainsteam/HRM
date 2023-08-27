@@ -1,0 +1,34 @@
+<ion-header [translucent]="true" class="header">
+  <ion-toolbar color="primary">
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-justify-content-center ion-align-items-center ion-margin-horizontal">
+  <ion-img
+  src="assets\img\icon.jpg"
+  alt="Union Security"
+></ion-img>
+<form (ngSubmit)="login()" [formGroup]="credentials">
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="Email" formControlName="email" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full"> 
+      <ion-label position="floating">Password</ion-label> 
+      <ion-input type="password" formControlName="password" required></ion-input>
+    </ion-item>
+
+    <ion-row class="ion-margin-top">  
+      <ion-col>
+        <ion-button type="submit" color="primary" expand="block">Sign In</ion-button>
+        <!-- <ion-button type="submit" color="primary" expand="block" [disabled]="!credentials.valid">Sign In</ion-button> -->
+
+      </ion-col>
+    </ion-row>
+    </form>
+  </div>
+  
+</ion-content>
